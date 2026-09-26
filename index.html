@@ -13,7 +13,7 @@
 <meta property="og:description" content="療育，從被光看見開始。一對一天使靈氣現場療育、線上療育，可加購許願光球祝福。">
 <meta property="og:url" content="https://thekeyofzeah.netlify.app/">
 <meta name="theme-color" content="#AFCFE4">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗝️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23EAF1F7'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%235D7B9D' font-family='serif'%3E瑟%3C/text%3E%3C/svg%3E">
 <!-- Google Search Console 驗證碼貼在這一行下面 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -472,33 +472,18 @@ header h1{line-height:1.45}
   header h1{font-size:2rem}
 }
 
-/* ---------- 右下角交談按鈕 ---------- */
-.chat-fab{
-  position:fixed;z-index:60;
-  right:calc(20px + env(safe-area-inset-right,0px));
-  bottom:calc(22px + env(safe-area-inset-bottom,0px));
-  display:inline-flex;align-items:center;gap:10px;
-  padding:12px 22px 12px 14px;border-radius:16px;
-  background:rgba(236,228,232,.94);backdrop-filter:blur(8px);
-  color:var(--ink);text-decoration:none;
-  font-size:.95rem;letter-spacing:.08em;
-  box-shadow:0 8px 24px rgba(93,123,157,.18);
-  transition:transform .3s,box-shadow .3s,opacity .3s;
+/* 選單圖示（線條） */
+.menu-btn{width:34px;height:34px;padding:0;position:relative}
+.menu-btn span{
+  position:absolute;left:7px;right:7px;height:1.5px;border-radius:2px;
+  background:var(--blue-deep);transition:transform .3s,opacity .3s,top .3s;
 }
-.chat-fab:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(93,123,157,.25)}
-.chat-ic{
-  width:30px;height:30px;border-radius:50%;
-  display:inline-flex;align-items:center;justify-content:center;
-  background:var(--blue-deep);color:var(--blue-deep);
-}
-.chat-ic svg path{fill:#fff}
-.chat-ic svg circle{fill:var(--blue-deep)}
-.chat-fab.is-hidden{opacity:0;pointer-events:none;transform:translateY(8px)}
-@media(max-width:640px){
-  .chat-fab{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:10px 18px 10px 11px;font-size:.88rem}
-  .chat-ic{width:27px;height:27px}
-}
-footer{padding-bottom:110px}
+.menu-btn span:nth-child(1){top:11px}
+.menu-btn span:nth-child(2){top:16.5px}
+.menu-btn span:nth-child(3){top:22px}
+nav.open .menu-btn span:nth-child(1){top:16.5px;transform:rotate(45deg)}
+nav.open .menu-btn span:nth-child(2){opacity:0}
+nav.open .menu-btn span:nth-child(3){top:16.5px;transform:rotate(-45deg)}
 
 /* 進場動畫 */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
@@ -513,7 +498,7 @@ footer{padding-bottom:110px}
       <b>瑟亞之鑰</b>
       <span>THE KEY OF ZEAH</span>
     </a>
-    <button class="menu-btn" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <button class="menu-btn" aria-label="開啟選單" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <a href="#about">關於瑟亞</a>
       <a href="#services">療育服務</a>
@@ -955,13 +940,6 @@ footer{padding-bottom:110px}
   <div class="copy">© 2026 瑟亞之鑰 The Key of Zeah · All rights reserved</div>
 </footer>
 
-<a class="chat-fab" href="#contact" aria-label="立即開始交談，前往聯絡我們">
-  <span class="chat-ic" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 3C6.9 3 3 6.6 3 11c0 2.2 1 4.2 2.6 5.6L5 21l4.1-2.2c.9.2 1.9.3 2.9.3 5.1 0 9-3.6 9-8.1S17.1 3 12 3z"/><circle cx="8.3" cy="11" r="1.2" fill="#fff"/><circle cx="12" cy="11" r="1.2" fill="#fff"/><circle cx="15.7" cy="11" r="1.2" fill="#fff"/></svg>
-  </span>
-  立即開始交談
-</a>
-
 <script>
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
@@ -977,7 +955,6 @@ function route(){
   const m = h.match(/^#service-(\d)$/);
   const id = m ? 'page-'+m[1] : ({'#contact':'page-contact','#booking':'page-booking','#terms':'page-terms'}[h] || null);
   pages.forEach(p=>p.hidden = true);
-  document.querySelector('.chat-fab').classList.toggle('is-hidden', id === 'page-contact');
   if(id){
     const page = document.getElementById(id);
     if(page){
@@ -1000,12 +977,10 @@ const menuBtn = document.querySelector('.menu-btn');
 menuBtn.addEventListener('click', ()=>{
   const open = nav.classList.toggle('open');
   menuBtn.setAttribute('aria-expanded', open);
-  menuBtn.textContent = open ? '✕' : '☰';
 });
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{
   nav.classList.remove('open');
   menuBtn.setAttribute('aria-expanded', false);
-  menuBtn.textContent = '☰';
 }));
 window.addEventListener('hashchange', route);
 route();
