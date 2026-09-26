@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>瑟亞之鑰 The Key of Zeah ✧ 天使靈氣療育</title>
+<title>瑟亞之鑰 The Key of Zeah｜天使靈氣療育</title>
 <meta name="description" content="瑟亞之鑰 The Key of Zeah｜天使靈氣療育師瑟亞，提供一對一天使靈氣現場療育、線上療育，可加購許願光球祝福。">
 <meta name="keywords" content="天使靈氣,Angel Reiki,瑟亞之鑰,The Key of Zeah,靈氣療育,許願光球,能量療育">
 <link rel="canonical" href="https://thekeyofzeah.netlify.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="瑟亞之鑰 The Key of Zeah">
-<meta property="og:title" content="瑟亞之鑰 The Key of Zeah ✧ 天使靈氣療育">
+<meta property="og:title" content="瑟亞之鑰 The Key of Zeah｜天使靈氣療育">
 <meta property="og:description" content="療育，從被光看見開始。一對一天使靈氣現場療育、線上療育，可加購許願光球祝福。">
 <meta property="og:url" content="https://thekeyofzeah.netlify.app/">
 <meta name="theme-color" content="#AFCFE4">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗝️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23EAF1F7'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%235D7B9D' font-family='serif'%3E瑟%3C/text%3E%3C/svg%3E">
 <!-- Google Search Console 驗證碼貼在這一行下面 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
   --blue:#AFCFE4;
   --blue-deep:#5D7B9D;
   --pink:#F3D7E0;
-  --ink:#4A5568;
+  --ink:#3E4757;
   --gold:#C9B58C;
   --card:#FFFFFF;
 }
@@ -32,7 +32,7 @@
 html{scroll-behavior:smooth}
 body{
   font-family:'Noto Sans TC',sans-serif;
-  font-weight:300;
+  font-weight:400;
   color:var(--ink);
   background:var(--bg);
   line-height:1.9;
@@ -325,9 +325,9 @@ a.course-link{display:block;text-decoration:none;color:inherit}
 .cp-block{margin-bottom:36px}
 .cp-block h2{font-size:1.1rem;margin-bottom:14px;letter-spacing:.14em}
 .cp-block p{font-size:.94rem}
-.learn{list-style:none}
-.learn li{position:relative;padding-left:26px;margin-bottom:8px;font-size:.94rem}
-.learn li::before{content:"✧";position:absolute;left:0;color:var(--gold)}
+.learn{list-style:none;counter-reset:step}
+.learn li{position:relative;padding-left:40px;margin-bottom:12px;font-size:.94rem;counter-increment:step}
+.learn li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:.1em;font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--gold);letter-spacing:.04em}
 .cp-info{
   display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;
 }
@@ -397,6 +397,94 @@ a.logo{display:block}
   border:1px dashed rgba(201,181,140,.6);
 }
 
+.info-note{display:block;font-size:.76rem;opacity:.7;margin-top:2px}
+.f-disclaimer{font-size:.76rem!important;opacity:.65!important;max-width:460px!important;margin:0 auto 14px!important}
+.f-links{font-size:.8rem;margin-bottom:14px}
+.f-links a{color:var(--blue-deep);text-decoration:none}
+.f-links a:hover{text-decoration:underline}
+.f-links span{margin:0 10px;opacity:.5}
+
+/* ---------- 閱讀舒適度與手機排版 ---------- */
+html{font-size:106.25%}
+h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
+p,li{text-wrap:pretty}
+.nobr{display:inline-block}
+.menu-btn{
+  display:none;background:none;border:0;cursor:pointer;
+  color:var(--blue-deep);font-size:1.35rem;line-height:1;padding:6px 4px;
+}
+@media(max-width:720px){
+  .menu-btn{display:block}
+  nav.open .nav-links{
+    display:flex;flex-direction:column;gap:0;
+    position:absolute;top:100%;left:0;right:0;
+    background:rgba(253,250,251,.97);backdrop-filter:blur(12px);
+    padding:4px 24px 14px;border-bottom:1px solid rgba(175,207,228,.3);
+  }
+  nav.open .nav-links a{padding:13px 0;font-size:1rem;border-bottom:1px solid rgba(175,207,228,.18)}
+  nav.open .nav-links a:last-child{border-bottom:0}
+}
+@media(max-width:640px){
+  html{font-size:112.5%}
+  .wrap{padding:0 22px}
+  header.sky{padding:80px 22px 100px}
+  .eyebrow{letter-spacing:.22em;font-size:.74rem}
+  header h1{letter-spacing:.06em;font-size:1.9rem;line-height:1.5}
+  .hero-sub{letter-spacing:.12em;font-size:.88rem}
+  .sec-head h2{letter-spacing:.06em}
+  .about-lead,.cp-intro,.hero-lead{text-align:left}
+  .hero-lead{text-align:center}
+  .course{padding:30px 24px}
+  .note{padding:22px 20px;gap:12px}
+  .cta h2{font-size:1.45rem;line-height:1.6}
+  section{padding:76px 0}
+}
+
+/* ---------- 編號取代符號、標題放大 ---------- */
+.num{
+  font-family:'Cormorant Garamond',serif;font-weight:500;
+  font-size:1.9rem;line-height:1;letter-spacing:.06em;
+  color:var(--gold);margin-bottom:14px;
+}
+.about-card h3{font-size:1.22rem;margin-bottom:12px}
+.phil-item h3{font-size:1.28rem;margin-bottom:12px}
+.note-num{
+  font-family:'Cormorant Garamond',serif;font-weight:500;
+  font-size:1.5rem;line-height:1.2;color:var(--gold);flex-shrink:0;min-width:2ch;
+}
+.note h3{font-size:1.12rem}
+.divider{gap:0}
+.divider::before,.divider::after{width:64px}
+.addon-banner{display:block}
+.addon-banner h3{font-size:1.15rem}
+.addon-block h2{font-size:1.15rem}
+
+.about-card p,.phil-item p,.note p,.course p,.addon-banner p{font-size:.96rem}
+@media(max-width:640px){
+  .note{flex-direction:column;gap:4px}
+  .note-num{font-size:1.35rem}
+}
+
+.hero-lead{font-size:1rem;line-height:2.1;letter-spacing:.06em;max-width:none}
+header h1{line-height:1.45}
+@media(max-width:640px){
+  .hero-lead{font-size:.92rem;letter-spacing:.03em;text-align:center}
+  header h1{font-size:2rem}
+}
+
+/* 選單圖示（線條） */
+.menu-btn{width:34px;height:34px;padding:0;position:relative}
+.menu-btn span{
+  position:absolute;left:7px;right:7px;height:1.5px;border-radius:2px;
+  background:var(--blue-deep);transition:transform .3s,opacity .3s,top .3s;
+}
+.menu-btn span:nth-child(1){top:11px}
+.menu-btn span:nth-child(2){top:16.5px}
+.menu-btn span:nth-child(3){top:22px}
+nav.open .menu-btn span:nth-child(1){top:16.5px;transform:rotate(45deg)}
+nav.open .menu-btn span:nth-child(2){opacity:0}
+nav.open .menu-btn span:nth-child(3){top:16.5px;transform:rotate(-45deg)}
+
 /* 進場動畫 */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
@@ -410,6 +498,7 @@ a.logo{display:block}
       <b>瑟亞之鑰</b>
       <span>THE KEY OF ZEAH</span>
     </a>
+    <button class="menu-btn" aria-label="開啟選單" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <a href="#about">關於瑟亞</a>
       <a href="#services">療育服務</a>
@@ -422,12 +511,14 @@ a.logo{display:block}
 
 <main id="home"><span id="home-top"></span>
 <header class="sky">
-  <span class="hero-key">✧</span>
-  <p class="eyebrow">Angel Reiki · The Key of Zeah</p>
-  <h1>療育，從被光看見開始</h1>
-  <p class="hero-sub">天使靈氣 × 能量療育 × 光的祝福</p>
+  <p class="eyebrow"><span class="nobr">Angel Reiki ·</span> <span class="nobr">The Key of Zeah</span></p>
+  <h1>療育<br>從被光看見開始</h1>
+  <p class="hero-sub"><span class="nobr">天使靈氣 ×</span> <span class="nobr">能量療育 ×</span> <span class="nobr">光的祝福</span></p>
   <p class="hero-lead">
-    瑟亞之鑰是一個與天使能量同行的療育空間。在這裡，你不需要準備好才能開始——只要願意，天使的光就會溫柔地接住你，陪你找回內在的平靜與柔軟。
+    這裡是瑟亞的天使靈氣療育空間。<br>
+    不論你帶著疲憊、困惑，<br>
+    或只是想好好休息一下，<br>
+    都歡迎你來，給自己一段安靜的時間。
   </p>
   <div class="btn-row">
     <a class="btn btn-primary" href="#services">瀏覽療育服務</a>
@@ -439,26 +530,26 @@ a.logo{display:block}
     <div class="sec-head reveal">
       <p class="eyebrow">About Zeah</p>
       <h2>關於瑟亞</h2>
-      <div class="divider">✧</div>
+      <div class="divider"></div>
     </div>
     <p class="about-lead reveal">
-      瑟亞是一位天使靈氣療育師。她相信每個人心中都握有一把屬於自己的鑰匙，而療育，就是在天使的陪伴下，輕輕把門推開的過程。瑟亞特別珍惜面對面的相遇——當兩個人真實地在同一個空間裡，能量的流動會更完整，也更溫暖。
+      瑟亞是一位天使靈氣療育師。她相信每個人心中都握有一把屬於自己的鑰匙，而療育，就是在大天使們的陪伴下，輕輕把門推開的過程。瑟亞特別珍惜面對面的相遇——當兩個人真實地在同一個空間裡，能量的流動會更完整，也更溫暖。
     </p>
     <div class="about-grid">
       <div class="about-card reveal">
-        <div class="ic">✦</div>
+        <div class="num">01</div>
         <h3>天使靈氣療育師</h3>
-        <p>以天使靈氣為管道，承接天使的高頻能量，為你帶來溫柔的調頻與洗滌。</p>
+        <p>以天使靈氣為管道，承接天使王國的高頻能量，為你帶來溫柔的調頻與洗滌。</p>
       </div>
       <div class="about-card reveal">
-        <div class="ic">❍</div>
+        <div class="num">02</div>
         <h3>珍惜當面的交流</h3>
         <p>偏愛一對一現場療育，讓能量在真實的陪伴中完整流動。</p>
       </div>
       <div class="about-card reveal">
-        <div class="ic">☾</div>
-        <h3>牌卡訊息輔助</h3>
-        <p>療育後以牌卡輔助，給予貼近你當下狀態的溫柔訊息。</p>
+        <div class="num">03</div>
+        <h3>療育前後的陪伴</h3>
+        <p>療育前先聊聊你的近況，結束後也留一段時間分享與整合，讓光好好留在你身上。</p>
       </div>
     </div>
   </div>
@@ -469,23 +560,23 @@ a.logo{display:block}
     <div class="sec-head reveal">
       <p class="eyebrow">Philosophy</p>
       <h2>在光與愛中療育</h2>
-      <div class="divider">✧</div>
+      <div class="divider"></div>
     </div>
     <div class="phil-grid">
       <div class="phil-item reveal">
-        <div class="sym">☽</div>
-        <h3>連結天使</h3>
-        <p>在療育的空間裡，天使的愛與指引會自然地靠近，陪你感受被守護的安心。</p>
+        <div class="num">01</div>
+        <h3>連結天使王國</h3>
+        <p>在療育的空間裡，大天使們的愛與指引會自然地靠近，陪你感受被守護的安心。</p>
       </div>
       <div class="phil-item reveal">
-        <div class="sym">✧</div>
+        <div class="num">02</div>
         <h3>溫柔調頻</h3>
         <p>天使靈氣從根源輕輕梳理，釋放累積的疲憊與情緒，讓身心回到和諧的頻率。</p>
       </div>
       <div class="phil-item reveal">
-        <div class="sym">☼</div>
+        <div class="num">03</div>
         <h3>一切如是</h3>
-        <p>不強求、不預設，交由天使帶來此刻最適合你的能量，相信每一份祝福都剛剛好。</p>
+        <p>不強求、不預設，交由大天使們帶來此刻最適合你的能量，相信每一份祝福都剛剛好。</p>
       </div>
     </div>
   </div>
@@ -496,9 +587,9 @@ a.logo{display:block}
     <div class="sec-head reveal">
       <p class="eyebrow">Healing</p>
       <h2>療育服務</h2>
-      <div class="divider">✧</div>
+      <div class="divider"></div>
       <p style="max-width:560px;margin:22px auto 0;font-size:.93rem">
-        無論你在哪裡、此刻需要什麼，都有一種方式能讓天使的光抵達你身邊。
+        無論你在哪裡、此刻需要什麼，都有一種方式能讓天使王國的光抵達你身邊。
       </p>
     </div>
 
@@ -510,7 +601,6 @@ a.logo{display:block}
         <div class="course-meta">
           <span class="chip">一對一</span>
           <span class="chip">現場療育</span>
-          <span class="chip">牌卡訊息回饋</span>
           <span class="chip">可加購許願光球</span>
         </div>
         <span class="more">查看服務詳情 ›</span>
@@ -519,11 +609,10 @@ a.logo{display:block}
       <a class="course course-link reveal" href="#service-2">
         <span class="course-tag">ONLINE · 線上</span>
         <h3>天使靈氣線上療育<small>一對一 · 遠距</small></h3>
-        <p>能量沒有距離。在你熟悉、安心的地方，一樣能接收到天使溫柔的洗滌與祝福。</p>
+        <p>能量沒有距離。在你熟悉、安心的地方，一樣能接收到天使王國溫柔的洗滌與祝福。</p>
         <div class="course-meta">
           <span class="chip">一對一</span>
           <span class="chip">遠距療育</span>
-          <span class="chip">牌卡訊息回饋</span>
           <span class="chip">可加購許願光球</span>
         </div>
         <span class="more">查看服務詳情 ›</span>
@@ -531,10 +620,9 @@ a.logo{display:block}
     </div>
 
     <div class="addon-banner reveal">
-      <span class="addon-ic">✧</span>
       <div>
         <h3>加購祝福：許願光球</h3>
-        <p>兩種天使靈氣療育，都可以加購「許願光球祝福」。在療育中與瑟亞一起聊聊你的心願，再由天使們協助建構一顆盛滿祝福的光球，溫柔地送往你的願望。</p>
+        <p>兩種天使靈氣療育，都可以加購「許願光球祝福」。在療育中與瑟亞一起聊聊你的心願，再由大天使們協助建構一顆盛滿祝福的光球，溫柔地送往你的願望。</p>
       </div>
     </div>
   </div>
@@ -545,38 +633,31 @@ a.logo{display:block}
     <div class="sec-head reveal">
       <p class="eyebrow">Gentle Notes</p>
       <h2>溫柔叮嚀</h2>
-      <div class="divider">✧</div>
+      <div class="divider"></div>
       <p style="max-width:520px;margin:22px auto 0;font-size:.93rem">
-        在開始之前，想輕輕地跟你說幾件事，讓這段療育旅程更安心、更自在。
+        第一次接觸天使靈氣也沒關係，以下幾件事，先讓你知道。
       </p>
     </div>
     <div class="notes-list">
       <div class="note reveal">
-        <span class="note-ic">♡</span>
+        <span class="note-num">01</span>
         <div>
-          <h3>許願光球，交給光就好</h3>
-          <p>加購許願光球時，我們會在療育中一起聊聊、設定你的願望。之後光球的建構與送出，就放心交給瑟亞和天使們吧！你不需要額外留下來陪著我們，帶著輕鬆的心情回到生活就好 ☺</p>
+          <h3>療育中會發生什麼</h3>
+          <p>天使靈氣是溫和的能量調頻。療育時，有人會覺得溫暖、放鬆，甚至不小心睡著；也有人沒有特別明顯的感覺，這些都很正常。有時過程中會出現想傳達給你的訊息，瑟亞會在結束後與你分享；沒有訊息的時候，也不影響這次療育。</p>
         </div>
       </div>
       <div class="note reveal">
-        <span class="note-ic">♡</span>
+        <span class="note-num">02</span>
         <div>
-          <h3>每一份感受，都是獨一無二的</h3>
-          <p>天使靈氣溫柔地作用在事情的「根源」，而不是直接改變「結果」。它的精神是「一切如是」，也是「Thy will, not my will——願祢的旨意成就，而非我的」。在療育中，是由天使主導，為你送上此刻最適合的能量。因為每個人的個性、經歷與狀態都不同，感受到的洗滌也會各不相同——無論你感覺到的是多是少，都請放心地相信：天使與神聖存有們，正把最美好的祝福交到你手中。</p>
+          <h3>許願光球怎麼進行</h3>
+          <p>許願光球需要你參與的，只有一開始的願望對談。我們聊完、把願望確定下來之後，光球的建構與送出由瑟亞和大天使們完成，你可以照常安排自己的時間。</p>
         </div>
       </div>
       <div class="note reveal">
-        <span class="note-ic">♡</span>
+        <span class="note-num">03</span>
         <div>
-          <h3>能量為主，訊息為輔</h3>
-          <p>天使靈氣的核心是能量的調頻。若療育過程中接收到天使想傳遞的訊息，瑟亞會溫柔地轉達給你；如果這一次沒有訊息，也請不用擔心，靈氣的祝福依然在完整地運作著。療育結束後，瑟亞也會透過牌卡，為你帶來貼近當下狀態的訊息回饋。</p>
-        </div>
-      </div>
-      <div class="note reveal">
-        <span class="note-ic">♡</span>
-        <div>
-          <h3>請好好照顧你的身體</h3>
-          <p>能量療育是一份溫柔的陪伴，但無法取代正規的醫療。如果你正面對身體或心理上的健康狀況，請一定要尋求醫師的專業協助。讓醫療與光一起守護你，是最完整的愛自己。</p>
+          <h3>療育不是醫療</h3>
+          <p>療育是一種陪伴，不能取代醫師的診斷與治療。如果你有身體或心理上的狀況，請以醫師的專業建議為優先。</p>
         </div>
       </div>
     </div>
@@ -585,8 +666,8 @@ a.logo{display:block}
 
 <section class="cta sky" id="start">
   <p class="eyebrow">Start Your Journey</p>
-  <h2>準備好轉動你的鑰匙了嗎？</h2>
-  <p>無論你此刻帶著什麼樣的心情，天使的光都在等你。歡迎與瑟亞聯繫，預約屬於你的療育時光。</p>
+  <h2><span class="nobr">準備好轉動</span><span class="nobr">你的鑰匙了嗎？</span></h2>
+  <p>無論你此刻帶著什麼樣的心情，天使王國的光都在等你。歡迎與瑟亞聯繫，預約屬於你的療育時光。</p>
   <div class="btn-row">
     <a class="btn btn-primary" href="#contact">聯絡我們</a>
   </div>
@@ -600,17 +681,16 @@ a.logo{display:block}
       <span class="course-tag">IN PERSON · 瑟亞最推薦</span>
       <h1>天使靈氣現場療育</h1>
       <p class="cp-sub">一對一 · 面對面</p>
-      <div class="divider">✧</div>
+      <div class="divider"></div>
     </div>
-    <p class="cp-intro">瑟亞一直覺得，當兩個人真實地在同一個空間裡，能量的交流會特別完整。現場療育中，你只需要放鬆地躺下或坐著，瑟亞會作為天使靈氣的管道，讓天使的高頻能量溫柔地流經你的身心，梳理積累的疲憊、情緒與壓力。這是瑟亞最喜歡、也最推薦的療育方式。</p>
+    <p class="cp-intro">瑟亞一直覺得，當兩個人真實地在同一個空間裡，能量的交流會特別完整。現場療育中，你只需要放鬆地躺下或坐著，瑟亞會作為天使靈氣的管道，讓天使王國的高頻能量溫柔地流經你的身心，梳理積累的疲憊、情緒與壓力。這是瑟亞最喜歡、也最推薦的療育方式。</p>
 
     <div class="cp-block">
       <h2>療育流程</h2>
       <ul class="learn">
           <li>療育前，先輕鬆聊聊你近來的狀態與想被陪伴的地方</li>
           <li>在安靜的空間中，接受天使靈氣的能量調頻</li>
-          <li>若接收到天使的訊息，瑟亞會溫柔地轉達</li>
-          <li>以牌卡輔助，給予貼近你當下狀態的訊息回饋</li>
+          <li>若接收到大天使們的訊息，瑟亞會溫柔地轉達</li>
           <li>療育後的分享與整合，讓光好好地留在你身上</li>
       </ul>
     </div>
@@ -621,14 +701,14 @@ a.logo{display:block}
     </div>
 
     <div class="cp-block addon-block">
-      <h2>✧ 加購：許願光球祝福</h2>
-      <p>每個人心裡都藏著一些溫柔的願望。加購許願光球後，瑟亞會在療育中陪你一起聊聊、設定你的心願，再與天使們一同建構一顆盛滿祝福能量的光球，把它溫柔地送往你的願望。</p>
-      <p style="margin-top:8px">設定好願望之後，光球的建構與送出就交給瑟亞和天使們，你不需要額外留下來陪伴喔 ☺</p>
+      <h2>加購：許願光球祝福</h2>
+      <p>每個人心裡都藏著一些溫柔的願望。加購許願光球後，瑟亞會在療育中陪你一起聊聊、設定你的心願，再與大天使們一同建構一顆盛滿祝福能量的光球，把它溫柔地送往你的願望。</p>
+      <p style="margin-top:8px">願望對談結束後，光球的建構與送出由瑟亞和大天使們完成，你可以照常安排自己的時間。</p>
     </div>
 
     <div class="cp-info">
       <div><small>進行方式</small><b>一對一 · 面對面</b></div>
-      <div><small>地點</small><b>預約確認後告知</b></div>
+      <div><small>地點</small><b>台北市區・近捷運</b><span class="info-note">詳細地址於預約確認後告知</span></div>
     </div>
 
     <div class="price-box">
@@ -640,7 +720,7 @@ a.logo{display:block}
     </div>
 
     <div class="notice">
-      預約前，請先讀讀 <a href="#booking" style="color:var(--blue-deep)">預約須知</a> 與 <a href="#notes" style="color:var(--blue-deep)">溫柔叮嚀</a>，讓這段療育旅程更安心自在 ✧
+      預約前，請先讀讀 <a href="#booking" style="color:var(--blue-deep)">預約須知</a> 與 <a href="#notes" style="color:var(--blue-deep)">溫柔叮嚀</a>，讓這段療育旅程更安心自在。
     </div>
 
     <a class="back back-bottom" href="#services">‹ 看看其他療育服務</a>
@@ -654,17 +734,16 @@ a.logo{display:block}
       <span class="course-tag">ONLINE · 線上</span>
       <h1>天使靈氣線上療育</h1>
       <p class="cp-sub">一對一 · 遠距</p>
-      <div class="divider">✧</div>
+      <div class="divider"></div>
     </div>
-    <p class="cp-intro">能量沒有距離。即使我們不在同一個地方，天使的光依然能穿越空間抵達你身邊。線上療育讓你待在自己熟悉、安心的角落，放鬆地接收天使靈氣的洗滌與祝福。適合住得比較遠，或此刻比較需要待在家裡的你。</p>
+    <p class="cp-intro">能量沒有距離。即使我們不在同一個地方，天使王國的光依然能穿越空間抵達你身邊。線上療育讓你待在自己熟悉、安心的角落，放鬆地接收天使靈氣的洗滌與祝福。適合住得比較遠，或此刻比較需要待在家裡的你。</p>
 
     <div class="cp-block">
       <h2>療育流程</h2>
       <ul class="learn">
           <li>療育前，透過通話聊聊你近來的狀態</li>
           <li>找一個安靜舒適的位置，放鬆地接收遠距能量調頻</li>
-          <li>若接收到天使的訊息，瑟亞會溫柔地轉達</li>
-          <li>以牌卡輔助，給予貼近你當下狀態的訊息回饋</li>
+          <li>若接收到大天使們的訊息，瑟亞會溫柔地轉達</li>
           <li>療育後的分享與整合</li>
       </ul>
     </div>
@@ -675,9 +754,9 @@ a.logo{display:block}
     </div>
 
     <div class="cp-block addon-block">
-      <h2>✧ 加購：許願光球祝福</h2>
-      <p>每個人心裡都藏著一些溫柔的願望。加購許願光球後，瑟亞會在療育中陪你一起聊聊、設定你的心願，再與天使們一同建構一顆盛滿祝福能量的光球，把它溫柔地送往你的願望。</p>
-      <p style="margin-top:8px">設定好願望之後，光球的建構與送出就交給瑟亞和天使們，你不需要額外留下來陪伴喔 ☺</p>
+      <h2>加購：許願光球祝福</h2>
+      <p>每個人心裡都藏著一些溫柔的願望。加購許願光球後，瑟亞會在療育中陪你一起聊聊、設定你的心願，再與大天使們一同建構一顆盛滿祝福能量的光球，把它溫柔地送往你的願望。</p>
+      <p style="margin-top:8px">願望對談結束後，光球的建構與送出由瑟亞和大天使們完成，你可以照常安排自己的時間。</p>
     </div>
 
     <div class="cp-info">
@@ -694,7 +773,7 @@ a.logo{display:block}
     </div>
 
     <div class="notice">
-      預約前，請先讀讀 <a href="#booking" style="color:var(--blue-deep)">預約須知</a> 與 <a href="#notes" style="color:var(--blue-deep)">溫柔叮嚀</a>，讓這段療育旅程更安心自在 ✧
+      預約前，請先讀讀 <a href="#booking" style="color:var(--blue-deep)">預約須知</a> 與 <a href="#notes" style="color:var(--blue-deep)">溫柔叮嚀</a>，讓這段療育旅程更安心自在。
     </div>
 
     <a class="back back-bottom" href="#services">‹ 看看其他療育服務</a>
@@ -708,36 +787,36 @@ a.logo{display:block}
       <span class="course-tag">BOOKING NOTES</span>
       <h1>預約須知</h1>
       <p class="cp-sub">讓每一次相遇都安心而完整</p>
-      <div class="divider">✧</div>
+      <div class="divider"></div>
     </div>
     <p class="cp-intro" style="text-align:center">
-      每一個預約時段，都是瑟亞為你靜心保留的。為了讓你和每一位來到這裡的人，都能擁有安穩而完整的療育時光，預約前請花一點時間，讀讀以下說明 ✧
+      每一個預約時段，都是瑟亞為你靜心保留的。為了讓你和每一位來到這裡的人，都能擁有安穩而完整的療育時光，預約前請花一點時間，讀讀以下說明。
     </p>
 
     <div class="notes-list">
       <div class="note">
-        <span class="note-ic">♡</span>
+        <span class="note-num">01</span>
         <div>
           <h3>全預約制</h3>
           <p>所有療育服務皆採預約制，需事先安排時段。為了能好好準備每一次的能量空間，暫不提供當日或臨時的預約。</p>
         </div>
       </div>
       <div class="note">
-        <span class="note-ic">♡</span>
+        <span class="note-num">02</span>
         <div>
           <h3>準時相見</h3>
           <p>請依約定的時間準時抵達，線上療育也請準時上線。若遲到超過 10 分鐘，將視為取消本次預約，費用恕無法退還。</p>
         </div>
       </div>
       <div class="note">
-        <span class="note-ic">♡</span>
+        <span class="note-num">03</span>
         <div>
           <h3>需要改期時</h3>
           <p>如果需要調整時間，請在預約日的 3 天前與瑟亞聯繫，完成改期安排。</p>
         </div>
       </div>
       <div class="note">
-        <span class="note-ic">♡</span>
+        <span class="note-num">04</span>
         <div>
           <h3>取消與退費</h3>
           <p><b style="font-weight:500;color:var(--blue-deep)">預約日 3 天前取消：</b>付款後 7 天內申請，可全額退費；付款超過 7 天申請，退費將扣除 2.8% 金流手續費。</p>
@@ -747,7 +826,7 @@ a.logo{display:block}
     </div>
 
     <div class="notice" style="margin-top:32px">
-      完成預約，即表示你已閱讀並同意以上預約須知。<br>謝謝你的體諒，讓瑟亞能把最完整的能量，留給每一位來到這裡的人 ♡
+      完成預約，即表示你已閱讀並同意以上預約須知。<br>謝謝你的體諒，讓瑟亞能把最完整的能量，留給每一位來到這裡的人。
     </div>
 
     <div class="btn-row" style="margin-top:36px">
@@ -763,10 +842,10 @@ a.logo{display:block}
       <span class="course-tag">CONTACT</span>
       <h1>聯絡我們</h1>
       <p class="cp-sub">與瑟亞聯繫</p>
-      <div class="divider">✧</div>
+      <div class="divider"></div>
     </div>
     <p class="cp-intro" style="text-align:center">
-      無論是想預約療育、詢問服務細節，或只是想先聊聊，都歡迎寫信給瑟亞。每一封信都會被溫柔地閱讀與回覆 ✧
+      無論是想預約療育、詢問服務細節，或只是想先聊聊，都歡迎寫信給瑟亞。每一封信都會被溫柔地閱讀與回覆。
     </p>
     <div class="contact-grid">
       <a class="contact-card" href="mailto:thekeyofzeah@gmail.com">
@@ -782,7 +861,7 @@ a.logo{display:block}
         <li>寫信告訴瑟亞你想預約的服務，以及方便的日期與時段（全預約制）</li>
         <li>確認時間後，依照匯款說明完成付款</li>
         <li>將匯款截圖回傳給瑟亞確認</li>
-        <li>在約定的時間，與天使的光相遇</li>
+        <li>在約定的時間，與天使王國的光相遇</li>
       </ul>
     </div>
     <p style="text-align:center;margin-top:32px;font-size:.9rem">
@@ -791,13 +870,73 @@ a.logo{display:block}
   </div>
 </article>
 
+<article class="course-page sky" id="page-terms" hidden>
+  <div class="wrap narrow">
+    <a class="back" href="#home-top">‹ 返回首頁</a>
+    <div class="cp-head">
+      <span class="course-tag">DISCLAIMER &amp; PRIVACY</span>
+      <h1>免責聲明與隱私權</h1>
+      <p class="cp-sub">讓信任，成為我們之間的第一道光</p>
+      <div class="divider"></div>
+    </div>
+    <p class="cp-intro" style="text-align:center">
+      當你瀏覽本網站或預約瑟亞之鑰的服務，即表示你已閱讀並同意以下說明。
+    </p>
+
+    <div class="notes-list">
+      <div class="note">
+        <span class="note-num">01</span>
+        <div>
+          <h3>服務的本質</h3>
+          <p>瑟亞之鑰提供的天使靈氣療育，是一種能量調頻、靈性陪伴與自我覺察的過程，並非醫療行為、心理治療或醫療診斷，也無法取代專業的醫療與心理諮商。如果你正面對身體或心理上的健康狀況，請務必尋求醫師或專業人員的協助。</p>
+        </div>
+      </div>
+      <div class="note">
+        <span class="note-num">02</span>
+        <div>
+          <h3>關於感受與結果</h3>
+          <p>每個人接收能量的方式與感受都不相同，療育與許願光球皆無法保證特定的結果。過程中傳達的大天使訊息，是溫柔的參考與提醒；生活中的每一個選擇，依然由你自己決定、為自己負責。</p>
+        </div>
+      </div>
+      <div class="note">
+        <span class="note-num">03</span>
+        <div>
+          <h3>你的個人資料</h3>
+          <p>預約時你提供的姓名、Email、聯絡方式與匯款資訊，只會用於預約聯繫、確認付款與提供服務。瑟亞不會將你的資料販售、交換或提供給任何第三方，除非法律有明確要求。若你希望刪除自己的資料，隨時來信告知即可。</p>
+        </div>
+      </div>
+      <div class="note">
+        <span class="note-num">04</span>
+        <div>
+          <h3>療育中的分享</h3>
+          <p>你在療育中分享的心事與經歷，瑟亞都會妥善保密，不會對外透露或作為其他用途。</p>
+        </div>
+      </div>
+      <div class="note">
+        <span class="note-num">05</span>
+        <div>
+          <h3>網站內容</h3>
+          <p>本網站的文字、設計與內容屬於瑟亞之鑰所有，如需引用或轉載，請先來信取得同意。本說明可能不定期更新，並以網站上的最新版本為準。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice" style="margin-top:32px">
+      如有任何疑問，歡迎來信 <a href="mailto:thekeyofzeah@gmail.com" style="color:var(--blue-deep)">thekeyofzeah@gmail.com</a><br>
+      <span style="font-size:.8rem;opacity:.7">最後更新：2026 年 9 月</span>
+    </div>
+  </div>
+</article>
+
 <footer>
   <div class="f-logo">瑟亞之鑰</div>
   <div class="f-en">THE KEY OF ZEAH · ANGEL REIKI</div>
   <p>瑟亞陪伴你走進天使靈氣的光裡，在愛與溫柔的能量中，找回身心靈的平衡。</p>
   <div class="f-contact">
-    <a href="mailto:thekeyofzeah@gmail.com">✉ thekeyofzeah@gmail.com</a>
+    <a href="mailto:thekeyofzeah@gmail.com">thekeyofzeah@gmail.com</a>
   </div>
+  <p class="f-disclaimer">本站服務以能量調頻、靈性陪伴與自我覺察為主，不屬於醫療行為，亦不取代專業醫療或心理諮商。</p>
+  <div class="f-links"><a href="#booking">預約須知</a><span>·</span><a href="#terms">免責聲明與隱私權</a></div>
   <div class="copy">© 2026 瑟亞之鑰 The Key of Zeah · All rights reserved</div>
 </footer>
 
@@ -814,7 +953,7 @@ const pages = document.querySelectorAll('.course-page');
 function route(){
   const h = location.hash;
   const m = h.match(/^#service-(\d)$/);
-  const id = m ? 'page-'+m[1] : ({'#contact':'page-contact','#booking':'page-booking'}[h] || null);
+  const id = m ? 'page-'+m[1] : ({'#contact':'page-contact','#booking':'page-booking','#terms':'page-terms'}[h] || null);
   pages.forEach(p=>p.hidden = true);
   if(id){
     const page = document.getElementById(id);
@@ -832,6 +971,17 @@ function route(){
     if(t) requestAnimationFrame(()=>t.scrollIntoView());
   }
 }
+
+const nav = document.querySelector('nav');
+const menuBtn = document.querySelector('.menu-btn');
+menuBtn.addEventListener('click', ()=>{
+  const open = nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{
+  nav.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', false);
+}));
 window.addEventListener('hashchange', route);
 route();
 </script>
