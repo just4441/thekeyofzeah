@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thekeyofzeah.netlify.app/sitemap.xml
